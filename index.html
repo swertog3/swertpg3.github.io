@@ -5,15 +5,15 @@
   <title> Иначе ошибка</title>
 </head>
 <body>
-  <ul>
+  <ul>  <!-- Неупорядоченный список ссылок -->
     <li> <a href="https://kubsu.ru/" > 1 </a> </li>
     <li> <a href="https://kubsu.ru/"> 2 </a> </li>
     <li> <a href="https://kubsu.ru/" > <img src="picture.jpg" alt="3">  </a></li>
     <li> <a href="/about"> 4 </a> </li>
     <li><a href="/">5 </a></li>
     <li> 
-      <a href="#about"> 6.откуда</a>
-      <p id="about"> 6.куда</p>
+      <a href="#about"> 6.откуда</a> <!-- Якорная ссылка -->
+      <p id="about"> 6.куда</p> <!-- Якорный элемент -->
     </li>
     <li><a href="https://kubsu.ru/?a=b&c=d&e=f">7</a></li>
     <li><a href="https://kubsu.ru/?id=g">8</a></li>
@@ -24,10 +24,10 @@
     <li> Это <a href="about.html"> 13 </a></li>
     <li><a href="https://example.com#x">14</a></li>
     <li>
-      <img src="map.jpg" usemap="#map" alt="15">
-      <map name="map">
-        <area shape="rect" coords="0,0,1,1" href="a.html" alt="15.1"> 
-        <area shape="circle" coords="0,0,3" href="b.html" alt="15.2" >
+      <img src="map.jpg" usemap="#map" alt="15"> <!-- Изображение с картой -->
+      <map name="map"> <!-- Карта областей -->
+        <area shape="rect" coords="0,0,1,1" href="a.html" alt="15.1">  <!-- Прямоугольная область -->
+        <area shape="circle" coords="0,0,3" href="b.html" alt="15.2" > <!-- Круглая область -->
       </map> 
     </li>
     <li><a href=""> 16</a></li>
@@ -36,31 +36,35 @@
     <li><a href="https://kubsu.ru" rel="noindex"> 19 </a></li>
     <li><a href="ftp://xyz:1234@ftp.example.com/about.html">21</a>
   </ul>
-  <ol>
+  <ol> <!-- Упорядоченный список -->
     <li><a href="#" title="a">20/1</a></li>
     <li><a href="#" title="b">20/2</a></li>
   </ol>
-  <form action="/submit" method="post">
-    <div class="с">
-      <label for="cOne">ФИО</label>
-      <input type="text" id="cOne" name="cOne" required>
+  <form action="/submit" method="post"> <!-- Форма для отправки данных методом POST -->
+    <div class="с"> <!-- Контейнер для поля формы -->
+      <label for="cOne">ФИО</label> <!-- Метка для поля ввода -->
+      <input type="text" id="cOne" name="cOne" required> <!-- Поле ввода текста -->
     </div>
     <div class="с">
+      <!-- Контейнер для поля ввода телефона -->
       <label for="cTwo">Телефон</label>
       <input type="tel" id="cTwo" name="cTwo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="000-000-000" required>
     </div>
     <div class="с">
+      <!-- Контейнер для поля email -->
       <label for="cThree">e-mail</label>
       <input type="email" id="cThree" name="cThree" required>
     </div> 
     <div class="с">
+      <!-- Контейнер для поля даты рождения -->
       <label for="cFour">дата рождения:</label>
       <input type="date" id="cFour" name="cFour" required>
     </div> 
     <div class="с">
       <label>пол</label>
       <div>
-        <input type="radio" id="cFiveOne" name="cFiveTwo" value="cFiveOne" required>
+        <!-- Контейнер для выбора пола -->
+        <input type="radio" id="cFiveOne" name="cFiveTwo" value="cFiveOne" required> <!-- Группа радиокнопок: все кнопки имеют одинаковое имя (name="cFiveTwo") =>только одна может быть выбрана -->
         <label for="cFiveOne">Муж</label>
       </div>
       <div>
@@ -73,8 +77,10 @@
       </div>
     </div>   
     <div class="с">
+      <!-- Контейнер для выбора языка программирования -->
       <label>любимый язык программирования</label>
-      <select name="programming_languages" multiple size="3">
+      <select name="programming_languages" multiple size="3"> <!-- Особенности select: multiple - возможность выбрать несколько значений, size="3" - высота списка в строках -->
+        <!-- Список доступных опций -->
         <option value="Pascal">Pascal</option>
         <option value="C">C</option>
         <option value="Cpp">C++</option>
@@ -89,14 +95,16 @@
       </select>
     </div>    
     <div class="с">
+      <!-- Контейнер для текстового поля -->
       <label for="cSeven">биография</label>
-      <textarea id="cSeven" name="cSeven" rows="3" cols="3"></textarea>
+      <textarea id="cSeven" name="cSeven" rows="3" cols="3"></textarea>  <!-- Особенности textarea: rows - высота в строках, cols - ширина в символах -->
     </div>   
     <div class="с">
+      <!-- Контейнер для чекбокса согласия -->
       <input type="checkbox" id="cEight" name="cEight" required>
       <label for="cEight">с контрактом ознакомлен(а)</label>
     </div>   
-    <button type="submit">кнопка «Сохранить»</button>
+    <button type="submit">кнопка «Сохранить»</button>  <!-- Кнопка отправки формы -->
   </form>
 </body>
 </html>
