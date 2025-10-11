@@ -1,110 +1,107 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title> Иначе ошибка</title>
+<!DOCTYPE html> <!-- Объявление типа документа -->
+<html lang="ru"> <!-- Корневой элемент HTML с указанием языка -->
+<head> <!-- Заголовок документа, содержит метаинформацию -->
+  <meta charset="UTF-8"> <!-- Установка кодировки документа -->
+  <title> Иначе ошибка</title> <!-- Заголовок страницы -->
 </head>
-<body>
+<body> <!-- Тело документа, содержит видимый контент -->
   <ul>  <!-- Неупорядоченный список ссылок -->
-    <li> <a href="https://kubsu.ru/" > 1 </a> </li>
-    <li> <a href="https://kubsu.ru/"> 2 </a> </li>
-    <li> <a href="https://kubsu.ru/" > <img src="picture.jpg" alt="3">  </a></li>
-    <li> <a href="/about"> 4 </a> </li>
-    <li><a href="/">5 </a></li>
+    <li> <a href="https://kubsu.ru/" > 1 </a> </li> <!-- Пункт списка с ссылкой на сайт -->
+    <li> <a href="https://kubsu.ru/"> 2 </a> </li> <!-- Аналогично предыдущему -->
+    <li> <a href="https://kubsu.ru/" > <img src="https://static.kino.1tv.ru/cdn/3291/background.jpg" alt="3">  </a></li> <!-- Ссылка с изображением внутри -->
+    <li> <a href="/about"> 4 </a> </li> <!-- Ссылка на внутреннюю страницу -->
+    <li><a href="/">5 </a></li> <!-- Ссылка на главную страницу сайта -->
     <li> 
       <a href="#about"> 6.откуда</a> <!-- Якорная ссылка -->
       <p id="about"> 6.куда</p> <!-- Якорный элемент -->
     </li>
-    <li><a href="https://kubsu.ru/?a=b&c=d&e=f">7</a></li>
-    <li><a href="https://kubsu.ru/?id=g">8</a></li>
-    <li> <a href="about.html"> 9 </a> </li>
-    <li> <a href="/about.html"> 10 </a> </li>
-    <li> <a href="../about.html"> 11 </a> </li>
-    <li> <a href="../../about.html"> 12 </a> </li>
-    <li> Это <a href="about.html"> 13 </a></li>
-    <li><a href="https://example.com#x">14</a></li>
+    <li><a href="https://kubsu.ru/?a=b&c=d&e=f">7</a></li> <!-- Ссылка с GET-параметрами -->
+    <li><a href="https://kubsu.ru/?id=g">8</a></li> <!-- Ссылка с одним GET-параметром -->
+    <li> <a href="about.html"> 9 </a> </li> <!-- Ссылка на файл в текущей директории -->
+    <li> <a href="/about.html"> 10 </a> </li> <!-- Ссылка на файл из корня сайта -->
+    <li> <a href="../about.html"> 11 </a> </li> <!-- Ссылка на файл в родительской директории -->
+    <li> <a href="../../about.html"> 12 </a> </li> <!-- Ссылка на файл через две директории вверх -->
+    <li> Это <a href="about.html"> 13 </a></li> <!-- Текст с вложенной ссылкой -->
+    <li><a href="https://example.com#x">14</a></li> <!-- Внешняя ссылка с якорем -->
     <li>
-      <img src="map.jpg" usemap="#map" alt="15"> <!-- Изображение с картой -->
-      <map name="map"> <!-- Карта областей -->
-        <area shape="rect" coords="0,0,1,1" href="a.html" alt="15.1">  <!-- Прямоугольная область -->
-        <area shape="circle" coords="0,0,3" href="b.html" alt="15.2" > <!-- Круглая область -->
+      <img src="https://i.pinimg.com/474x/b6/a2/fa/b6a2faaad435ad7bdc52abe8353500a1.jpg?nii=t" usemap="#map" alt="15"> <!-- Изображение с картой областей -->
+      <map name="map"> <!-- Карта областей для изображения -->
+        <area shape="rect" coords="0,0,15,15" href="a.html" alt="15.1">  <!-- Прямоугольная кликабельная область, где(x1;y1),(x2;y2), т.е. координаты левого верхнего и правого нижнего, задаются в пикселях -->
+        <area shape="circle" coords="100,100,33" href="b.html" alt="15.2" > <!-- Круглая кликабельная область -->
       </map> 
     </li>
-    <li><a href=""> 16</a></li>
-    <li><a>17</a></li>
-    <li><a href="https://kubsu.ru" rel="nofollow"> 18 </a></li>
-    <li><a href="https://kubsu.ru" rel="noindex"> 19 </a></li>
-    <li><a href="ftp://xyz:1234@ftp.example.com/about.html">21</a>
+    <li><a href=""> 16</a></li> <!-- Пустая ссылка (может использоваться для JavaScript) -->
+    <li><a>17</a></li> <!-- Ссылка без href (неактивная) -->
+    <li><a href="https://kubsu.ru" rel="nofollow"> 18 </a></li> <!-- Ссылка с указанием не передавать вес страницы -->
+    <li><a href="https://kubsu.ru" rel="noindex"> 19 </a></li> <!-- Ссылка с указанием не индексировать -->
+    <li><a href="ftp://xyz:1234@ftp.example.com/about.html">21</a> <!-- FTP-ссылка с авторизацией -->
   </ul>
-  <ol> <!-- Упорядоченный список -->
-    <li><a href="#" title="a">20/1</a></li>
-    <li><a href="#" title="b">20/2</a></li>
+  <ol> <!-- Упорядоченный (нумерованный) список -->
+    <li><a href="#" title="a">20/1</a></li> <!-- Нумерованный пункт со ссылкой и всплывающей подсказкой -->
+    <li><a href="#" title="b">20/2</a></li> <!-- Аналогично предыдущему -->
   </ol>
   <form action="/submit" method="post"> <!-- Форма для отправки данных методом POST -->
-    <div class="с"> <!-- Контейнер для поля формы -->
-      <label for="cOne">ФИО</label> <!-- Метка для поля ввода -->
-      <input type="text" id="cOne" name="cOne" required> <!-- Поле ввода текста -->
+    <div class="с"> <!-- Контейнер для поля ввода телефона -->
+      <label for="cTwo">Телефон</label> <!-- Метка для поля ввода телефона -->
+      <input type="tel" id="cTwo" name="cTwo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="000-000-000" required> 
+      <!-- Поле ввода телефона с маской и обязательным заполнением -->
     </div>
-    <div class="с">
-      <!-- Контейнер для поля ввода телефона -->
-      <label for="cTwo">Телефон</label>
-      <input type="tel" id="cTwo" name="cTwo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="000-000-000" required>
-    </div>
-    <div class="с">
-      <!-- Контейнер для поля email -->
-      <label for="cThree">e-mail</label>
-      <input type="email" id="cThree" name="cThree" required>
+    <div class="с"> <!-- Контейнер для поля email -->
+      <label for="cThree">e-mail</label> <!-- Метка для поля email -->
+      <input type="email" id="cThree" name="cThree" required> 
+      <!-- Поле ввода email с проверкой формата -->
     </div> 
-    <div class="с">
-      <!-- Контейнер для поля даты рождения -->
-      <label for="cFour">дата рождения:</label>
-      <input type="date" id="cFour" name="cFour" required>
+    <div class="с"> <!-- Контейнер для поля даты рождения -->
+      <label for="cFour">дата рождения:</label> <!-- Метка для даты -->
+      <input type="date" id="cFour" name="cFour" required> 
+      <!-- Поле выбора даты с календарем -->
     </div> 
-    <div class="с">
-      <label>пол</label>
-      <div>
-        <!-- Контейнер для выбора пола -->
-        <input type="radio" id="cFiveOne" name="cFiveTwo" value="cFiveOne" required> <!-- Группа радиокнопок: все кнопки имеют одинаковое имя (name="cFiveTwo") =>только одна может быть выбрана -->
-        <label for="cFiveOne">Муж</label>
-      </div>
-      <div>
-        <input type="radio" id="cFiveThree" name="cFiveTwo" value="cFiveThree">
-        <label for="cFiveThree">Жен</label>
-      </div>
-      <div>
-        <input type="radio" id="cFiveFour" name="cFiveTwo" value="cFiveFour">
-        <label for="cFiveFour">Не указан</label>
-      </div>
-    </div>   
-    <div class="с">
-      <!-- Контейнер для выбора языка программирования -->
-      <label>любимый язык программирования</label>
-      <select name="programming_languages[]" multiple size="3"> <!-- Особенности select: multiple - возможность выбрать несколько значений, size="3" - высота списка в строках -->
-        <!-- Список доступных опций -->
-        <option value="Pascal">Pascal</option>
-        <option value="C">C</option>
-        <option value="Cpp">C++</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="PHP">PHP</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Haskell">Haskell</option>
-        <option value="Clojure">Clojure</option>
-        <option value="Prolog">Prolog</option>
-        <option value="Scala">Scala</option>
-      </select>
-    </div>    
-    <div class="с">
-      <!-- Контейнер для текстового поля -->
-      <label for="cSeven">биография</label>
-      <textarea id="cSeven" name="cSeven" rows="3" cols="3"></textarea>  <!-- Особенности textarea: rows - высота в строках, cols - ширина в символах -->
-    </div>   
-    <div class="с">
-      <!-- Контейнер для чекбокса согласия -->
-      <input type="checkbox" id="cEight" name="cEight" required>
-      <label for="cEight">с контрактом ознакомлен(а)</label>
-    </div>   
-    <button type="submit">кнопка «Сохранить»</button>  <!-- Кнопка отправки формы -->
+    <div class="с"> <!-- Контейнер для выбора пола -->
+      <label>пол</label> <!-- Общая метка для группы радиокнопок -->
+        <div>
+          <input type="radio" id="cFiveOne" name="cFiveTwo" value="cFiveOne" required> 
+          <!-- Радиокнопка для выбора мужского пола -->
+          <label for="cFiveOne">Муж</label>
+        </div>
+        <div>
+          <input type="radio" id="cFiveThree" name="cFiveTwo" value="cFiveThree"> 
+          <!-- Радиокнопка для выбора женского пола -->
+          <label for="cFiveThree">Жен</label>
+        </div>
+        <div>
+          <input type="radio" id="cFiveFour" name="cFiveTwo" value="cFiveFour"> 
+          <!-- Радиокнопка для неуказанного пола -->
+          <label for="cFiveFour">Не указан</label>
+        </div>
+      </div>   
+      <div class="с"> <!-- Контейнер для выбора языка программирования -->
+        <label>любимый язык программирования</label> <!-- Метка для списка -->
+        <select name="programming_languages[]" multiple size="3"> 
+          <!-- Выпадающий список с множественным выбором и высотой 3 строки -->
+          <option value="Pascal">Pascal</option> <!-- Вариант выбора -->
+          <option value="C">C</option>
+          <option value="Cpp">C++</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="PHP">PHP</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Haskell">Haskell</option>
+          <option value="Clojure">Clojure</option>
+          <option value="Prolog">Prolog</option>
+          <option value="Scala">Scala</option>
+        </select>
+      </div>    
+      <div class="с"> <!-- Контейнер для текстового поля -->
+        <label for="cSeven">биография</label> <!-- Метка для текста -->
+        <textarea id="cSeven" name="cSeven" rows="3" cols="3"></textarea> 
+        <!-- Многострочное текстовое поле размером 3x3 -->
+      </div>   
+      <div class="с"> <!-- Контейнер для чекбокса согласия -->
+        <input type="checkbox" id="cEight" name="cEight" required> 
+        <!-- Обязательный чекбокс -->
+        <label for="cEight">с контрактом ознакомлен(а)</label>
+      </div>   
+      <button type="submit">кнопка «Сохранить»</button>  <!-- Кнопка для отправки формы -->
   </form>
 </body>
 </html>
